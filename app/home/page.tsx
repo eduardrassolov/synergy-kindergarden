@@ -3,6 +3,7 @@ import React from 'react'
 import Article from './components/article/Article'
 import { IArticle } from './lib/definitions'
 import ArticleList from './components/article/ArticleList'
+import Groups from './components/groups/Groups'
 
 export default function HomePage() {
     return (
@@ -17,6 +18,8 @@ export default function HomePage() {
 
                 <ArticleList />
             </section>
+
+            <Groups />
         </main>
     )
 }
