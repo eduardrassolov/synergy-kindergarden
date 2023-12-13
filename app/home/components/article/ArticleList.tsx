@@ -1,6 +1,7 @@
 import React from 'react'
 import Article from './Article'
 import { IArticle } from '../../lib/definitions'
+import Header from '../typography/Header'
 
 const articles: IArticle[] = [
     {
@@ -31,8 +32,12 @@ const articles: IArticle[] = [
 
 export default function ArticleList() {
     return (
-        <div className="flex flex-col mt-5 gap-10 sm:flex-row sm:gap-4 justify-between">
-            {articles.map(item => <Article key={item.imgAlt} data={item} />)}
-        </div>
+        <section>
+            <Header>Що ми пропонуємо:</Header>
+
+            <div className="flex flex-col mt-5 gap-10 sm:flex-row sm:gap-4 justify-between flex-wrap">
+                {articles.map(item => <Article key={item.imgAlt} data={item} />)}
+            </div>
+        </section>
     )
 }

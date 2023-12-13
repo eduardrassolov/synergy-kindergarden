@@ -1,25 +1,29 @@
-import Image from 'next/image'
 import React from 'react'
-import Article from './components/article/Article'
-import { IArticle } from './lib/definitions'
 import ArticleList from './components/article/ArticleList'
 import Groups from './components/groups/Groups'
+import AboutUs from './components/about-us/AboutUs'
+import Divider from './components/divider/Divider'
 
 export default function HomePage() {
     return (
-        <main className='h-[100vh] mx-auto px-4 max-w-[90rem]'>
+        <main className='mx-auto px-4 max-w-[90rem]'>
             <section>
-                <article>
-                    <h1 className='text-center text-xl font-semibold my-4'>Ласкаво просимо до Синегрія</h1>
+                <article className='my-8'>
+                    <h1 className='text-center text-4xl font-semibold my-2'>Ласкаво просимо у Синергія</h1>
 
-                    <p className="mb-2">Україномовний центр розвитку для дошкільнят у м.Констанца.</p>
-                    <p>Ми - простір розвитку, безпеки, щасливого дитинства в нових реаліях!</p>
+                    <p className="text-center text-gray-600">Україномовний центр розвитку для дошкільнят у м.Констанца.</p>
+                    <p className='text-center text-gray-600'> Ми - простір розвитку, безпеки, щасливого дитинства в нових реаліях!</p>
                 </article>
-
-                <ArticleList />
             </section>
+            <Divider />
+
+            <ArticleList />
+            <Divider />
 
             <Groups />
-        </main>
+            <Divider />
+
+            <AboutUs />
+        </main >
     )
 }
