@@ -3,6 +3,7 @@ import ArticleList from './components/article/ArticleList'
 import Groups from './components/groups/Groups'
 import AboutUs from './components/about-us/AboutUs'
 import Divider from './components/divider/Divider'
+import TeamList from './components/team/TeamList'
 
 export default function HomePage() {
     return (
@@ -24,6 +25,10 @@ export default function HomePage() {
             <Divider />
 
             <AboutUs />
+            <Divider />
+
+            <TeamList />
+
         </main >
     )
 }
