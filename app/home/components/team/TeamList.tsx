@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from '../typography/Header'
 import TeamMember from './TeamMember'
+import getTeam from './getTeam'
 
 const team = [
     {
@@ -17,7 +18,10 @@ const team = [
     }
 ]
 
-export default function TeamList() {
+export default async function TeamList() {
+    const data = await getTeam();
+    console.log(data);
+
     return (
         <section>
             <Header>Наша команда:</Header>
